@@ -2,55 +2,143 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Deo Favr</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deo Favr - Official Website</title>
+  <style>
+    :root {
+      --light-bg: #ffffff;
+      --light-text: #111111;
+      --dark-bg: #111111;
+      --dark-text: #ffffff;
+      --primary-color: #f14a16;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--light-text);
+      transition: all 0.4s ease;
+      background-image: url('background.jpg'); /* Replace with your actual image name */
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
+    .dark-mode {
+      background-color: var(--dark-bg);
+      color: var(--dark-text);
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      color: #fff;
+    }
+
+    .toggle-mode {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      background: var(--primary-color);
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.8);
+      margin: 2rem auto;
+      max-width: 800px;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .bio h2, .music h2, .contact h2 {
+      color: var(--primary-color);
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 100%;
+      margin: 1rem 0;
+      border: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #fff;
+      background: rgba(0,0,0,0.7);
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Deo Favr</h1>
-    <p>Spiritual rhythms. Social roots.</p>
-    <button onclick="toggleTheme()">Toggle Theme</button>
-  </header>
 
-  <section id="about">
-    <h2>About</h2>
-    <p>Deo Favr (formerly Don Rodeo) is an Afrobeat and Afropop artist from Nigeria. 
-       With a degree in both music and social sciences, he creates powerful soundscapes 
-       that blend conscious themes with infectious rhythms. Influenced by Snoop Dogg, 
-       Notorious B.I.G., Juice WRLD, and Enya, his sound bridges the spiritual and the street.</p>
-  </section>
+<header>
+  <h1>Deo Favr</h1>
+  <button class="toggle-mode" onclick="toggleMode()">Toggle Light/Dark Mode</button>
+</header>
 
-  <section id="music">
-    <h2>Listen</h2>
-    <ul>
-      <li><a href="https://open.spotify.com/artist/4sDOVZbLK6IKbP774O7yqa?si=bozbOPS5Se-ZhW9HR9f6qQ" target="_blank">Spotify</a></li>
-      <li><a href="https://youtube.com/@deofavr?si=1MeT4DvvEZhyQTB2" target="_blank">YouTube</a></li>
-      <li><a href="https://music.apple.com/us/artist/don-rodeo/1562613994" target="_blank">Apple Music</a></li>
-      <li><a href="https://audiomack.com/deofavr" target="_blank">Audiomack</a></li>
-      <li><a href="https://on.soundcloud.com/6VZH6vcP47mS5dhYA" target="_blank">SoundCloud</a></li>
-      <li><a href="https://www.boomplay.com/share/artist/24119613?srModel=COPYLINK&srList=IOS" target="_blank">Boomplay</a></li>
-    </ul>
-  </section>
+<section class="bio">
+  <h2>About Deo Favr</h2>
+  <p>
+    Deo Favr, formerly known as Don Rodeo, is a Nigerian artist blending rhythm, emotion, and intellect. 
+    Born Favour Samuel Ufort Mensah, he began his musical journey at just seven years old, mimicking vocals 
+    and harmonizing with songs playing daily in his household. It was his older brother’s gift of hip-hop 
+    DVDs that truly ignited his passion, introducing him to artists like DJ Khaled and Cassidy.
+  </p>
+  <p>
+    Today, Deo Favr is a singer, songwriter, and occasional producer whose sound cuts across Afrobeats, 
+    AfroPop, trap, and drill. His artistry is a fusion of street energy and soulful experimentation, 
+    drawing influence from both global and African legends. These include Wande Coal, Tekno, 2Face Idibia, 
+    D’banj, pSquare, Fela Kuti, Lagbaja, Sunny Ade, and Sunny Nneji, alongside global icons like Snoop Dogg, 
+    Notorious B.I.G, Juice WRLD, Big Sean, Young MA, Diplo, and the classical genius of Yanni and Enya.
+  </p>
+  <p>
+    But Deo Favr is more than a musician—he’s a social scientist with academic degrees in both music and 
+    social sciences. This rare blend of creativity and intellectual depth gives his work a unique voice, 
+    as he seeks not just to entertain but to inspire and elevate.
+  </p>
+</section>
 
-  <section id="socials">
-    <h2>Connect</h2>
-    <ul>
-      <li><a href="https://www.instagram.com/deofavr" target="_blank">Instagram</a></li>
-      <li><a href="https://x.com/deofavr?s=21" target="_blank">X (Twitter)</a></li>
-      <li><a href="https://snapchat.com/t/qKsPEBM5" target="_blank">Snapchat</a></li>
-    </ul>
-  </section>
+<section class="music">
+  <h2>Listen to My Music</h2>
+  <iframe style="border-radius:12px" 
+    src="https://open.spotify.com/embed/artist/4sDOVZbLK6IKbP774O7yqa?utm_source=generator" 
+    width="100%" height="152" allowfullscreen="" 
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+  </iframe>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:info@deofavr.ml">info@deofavr.ml</a> (Coming soon)</p>
-  </section>
+  <iframe src="https://audiomack.com/embed/deofavr/song" 
+    scrolling="no" width="100%" height="110" 
+    allow="autoplay">
+  </iframe>
+</section>
 
-  <footer>
-    <p>&copy; 2025 Deo Favr. All rights reserved.</p>
-  </footer>
+<section class="contact">
+  <h2>Contact Me</h2>
+  <p>For collaborations, bookings or inquiries:</p>
+  <p>Email: <a href="mailto:info@deofavr.ml">info@deofavr.ml</a></p>
+  <p>Instagram: <a href="https://www.instagram.com/deofavr" target="_blank">@deofavr</a></p>
+</section>
 
-  <script src="script.js"></script>
+<footer>
+  &copy; 2025 Deo Favr. All rights reserved.
+</footer>
+
+<script>
+  function toggleMode() {
+    document.body.classList.toggle("dark-mode");
+  }
+</script>
+
 </body>
 </html>

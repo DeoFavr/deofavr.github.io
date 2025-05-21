@@ -1,99 +1,97 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  transition: background-color 0.4s, color 0.4s;
-  background-color: #111;
-  color: #f0f0f0;
-}
-
-header {
-  padding: 1em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #000;
-}
-
-.logo {
-  height: 60px;
-}
-
-#toggle-theme {
-  background: transparent;
-  color: inherit;
-  border: 1px solid;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-.hero {
-  background-size: cover;
-  background-position: center;
-  padding: 100px 20px;
-  text-align: center;
-  color: white;
-}
-
-.hero h1 {
-  font-size: 3em;
-  margin-bottom: 0.3em;
-}
-
-.bio, .socials, .gallery {
-  padding: 40px 20px;
-  max-width: 800px;
-  margin: auto;
-}
-
-.bio h2, .socials h2 {
-  color: #e60023;
-}
-
-.gallery {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.gallery img {
-  width: 30%;
-  border-radius: 10px;
-}
-
-.socials ul {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-}
-
-.socials li {
-  margin: 8px 0;
-}
-
-.socials a {
-  color: #e60023;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-footer {
-  background: #000;
-  color: #aaa;
-  text-align: center;
-  padding: 1em;
-}
-
-/* Light mode */
-body.light-mode {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
   background-color: #fff;
   color: #000;
 }
 
-body.light-mode header {
-  background: #eee;
+body.dark {
+  background-color: #121212;
+  color: #eee;
 }
 
-body.light-mode .socials a {
-  color: #d40000;
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom right, #ff0000, #222);
+  color: white;
+}
+
+.hero-img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+
+h1, h2 {
+  font-family: 'Arial Black', sans-serif;
+  margin-bottom: 10px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  background: #555;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #777;
+}
+
+.about, .gallery, .music-links {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  margin: 10px auto;
+}
+
+.gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gallery-row img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.music-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.music-links li {
+  margin: 10px 0;
+}
+
+.music-links a {
+  color: #ff3333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.music-links a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
